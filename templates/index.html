@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF Upload and Extract</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: rgb(233, 219, 219);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 75%;
+            height: 150Xpx;
+        }
+
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        input[type="file"] {
+            margin: 10px 0;
+        }
+
+        button {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Upload PDF Files to Extract Information</h1>
+        <form action="/uploads" method="post" enctype="multipart/form-data">
+            <input type="file" name="files" accept=".pdf,.txt" multiple required>
+            <button type="submit">Upload and Extract</button>
+        </form>
+    </div>
+</body>
+</html>
